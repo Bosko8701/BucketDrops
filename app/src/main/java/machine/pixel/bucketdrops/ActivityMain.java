@@ -19,9 +19,14 @@ public class ActivityMain extends AppCompatActivity {
 
         @Override
         public void onClick(View v) {
-            Toast.makeText(ActivityMain.this, "El boton ha sido puchado", Toast.LENGTH_SHORT).show();
+            showDialogAdd();
         }
     };
+
+    private void showDialogAdd() {
+        DialogAdd dialog = new DialogAdd();
+        dialog.show(getSupportFragmentManager(),"Agregar");
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
